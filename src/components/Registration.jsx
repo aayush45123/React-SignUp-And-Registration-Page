@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Registration.module.css";
 import { RiAccountCircleFill } from "react-icons/ri";
+import { Link } from "react-router";
 
 const Registration = () => {
   const initialData = {
@@ -76,7 +77,7 @@ const Registration = () => {
         </button>
 
         <div className={styles.oldUser}>
-          <a href="/sign-up">Already Registered? Sign In</a>
+          <Link to="/sign-up">Already Registered? Sign In</Link>
         </div>
       </form>
     </div>

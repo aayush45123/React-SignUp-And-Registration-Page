@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/SignUp.module.css";
 import { FiLogIn } from "react-icons/fi";
+import { Link } from "react-router";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -54,7 +55,7 @@ const SignUp = () => {
         </button>
 
         <div className={styles.newUser}>
-          <a href="/">Create A New Account</a>
+          <Link to="/">Create A New Account</Link>
         </div>
       </form>
     </div>

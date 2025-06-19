@@ -9,22 +9,21 @@ import App from "./App";
 import Registration from "./components/Registration";
 import SignUp from "./components/SignUp";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        { path: "/", element: <Registration /> },
+        { path: "/sign-up", element: <SignUp /> },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <Registration />,
-      },
-      {
-        path: "/sign-up",
-        element: <SignUp />,
-      },
-    ],
-  },
-]);
+    basename: "/React-SignUp-And-Registration-Page", // Add this line for GitHub Pages
+  }
+);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

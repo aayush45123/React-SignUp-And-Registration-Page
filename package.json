@@ -1,17 +1,17 @@
 {
-  "homepage": "https://aayush45123.github.io/College-Landing-Page-Somaiya",
+  "homepage": "https://aayush45123.github.io/React-SignUp-And-Registration-Page",
   "name": "react-signup-and-registration-page",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-},
-"dependencies": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
     "bootstrap": "^5.3.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

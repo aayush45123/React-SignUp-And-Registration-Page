@@ -1,0 +1,419 @@
+/* SignUp.module.css */
+
+.signContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2196f3 0%, #21cbf3 100%);
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background elements */
+.signContainer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 50px 50px;
+  animation: float 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.formContainerSign {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 50px 40px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 2;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.formContainerSign:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Decorative elements */
+.formContainerSign::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #2196f3, #21cbf3, #ff6b6b, #4ecdc4);
+  background-size: 400% 400%;
+  animation: gradientShift 4s ease infinite;
+  border-radius: 25px 25px 0 0;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.formContainerSign::after {
+  content: "👋";
+  position: absolute;
+  top: -15px;
+  right: 30px;
+  font-size: 30px;
+  background: linear-gradient(135deg, #2196f3, #21cbf3);
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(33, 150, 243, 0.3);
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+}
+
+/* Form title */
+.formContainerSign h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 35px;
+  font-weight: 700;
+  font-size: 32px;
+  background: linear-gradient(135deg, #2196f3, #21cbf3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.formContainerSign label {
+  display: block;
+  margin-bottom: 10px;
+  color: #444;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  position: relative;
+}
+
+.formContainerSign label::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #2196f3, #21cbf3);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.formContainerSign input {
+  width: 100%;
+  padding: 18px 24px;
+  margin-bottom: 25px;
+  border: 2px solid #e0f2fe;
+  border-radius: 15px;
+  font-size: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #f8fdff;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.formContainerSign input:focus {
+  outline: none;
+  border-color: #2196f3;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.15);
+  transform: translateY(-3px) scale(1.02);
+}
+
+.formContainerSign input::placeholder {
+  color: #90caf9;
+  font-style: italic;
+  transition: opacity 0.3s ease;
+}
+
+.formContainerSign input:focus::placeholder {
+  opacity: 0.5;
+}
+
+.formContainerSign input:hover:not(:focus) {
+  border-color: #64b5f6;
+  background: #fff;
+  transform: translateY(-1px);
+}
+
+/* Button styling */
+.formContainerSign button {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #2196f3 0%, #21cbf3 100%);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.formContainerSign button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s;
+}
+
+.formContainerSign button:hover::before {
+  left: 100%;
+}
+
+.formContainerSign button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(33, 150, 243, 0.4);
+  background: linear-gradient(135deg, #1976d2 0%, #0277bd 100%);
+}
+
+.formContainerSign button:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* New user section */
+.newUser {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 2px solid #e0f2fe;
+  position: relative;
+}
+
+.newUser::before {
+  content: "OR";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0 15px;
+  color: #2196f3;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.newUser a {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: 2px solid #2196f3;
+  background: transparent;
+}
+
+.newUser a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #2196f3, #21cbf3);
+  border-radius: 25px;
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+
+.newUser a:hover::before {
+  width: 100%;
+}
+
+.newUser a:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.3);
+}
+
+/* Input validation styles */
+.formContainerSign input:valid {
+  border-color: #4caf50;
+}
+
+.formContainerSign input:invalid:not(:placeholder-shown) {
+  border-color: #ff5722;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .signContainer {
+    padding: 15px;
+  }
+
+  .formContainerSign {
+    padding: 40px 30px;
+    margin: 10px;
+    border-radius: 20px;
+  }
+
+  .formContainerSign h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .formContainerSign input {
+    padding: 15px 20px;
+    font-size: 15px;
+  }
+
+  .formContainerSign button {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .formContainerSign {
+    padding: 35px 25px;
+  }
+
+  .formContainerSign::after {
+    display: none;
+  }
+
+  .formContainerSign input {
+    padding: 12px 18px;
+  }
+
+  .newUser a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Accessibility improvements */
+.formContainerSign input:focus,
+.formContainerSign button:focus,
+.newUser a:focus {
+  outline: 3px solid #2196f3;
+  outline-offset: 2px;
+}
+
+/* Loading state */
+.formContainerSign button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.formContainerSign button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .formContainerSign {
+    background: rgba(18, 18, 18, 0.95);
+    color: #e3f2fd;
+  }
+
+  .formContainerSign h2 {
+    color: #e3f2fd;
+  }
+
+  .formContainerSign label {
+    color: #bbdefb;
+  }
+
+  .formContainerSign input {
+    background: #263238;
+    border-color: #37474f;
+    color: #e3f2fd;
+  }
+
+  .formContainerSign input:focus {
+    background: #1a1a1a;
+  }
+
+  .newUser {
+    border-top-color: #37474f;
+  }
+
+  .newUser::before {
+    background: rgba(18, 18, 18, 0.95);
+  }
+}

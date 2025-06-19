@@ -1,0 +1,269 @@
+/* Registration.module.css */
+
+.regContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.RegistrationForm {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.RegistrationForm::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c);
+  background-size: 300% 300%;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.RegistrationForm h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.RegistrationForm label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.RegistrationForm input {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border: 2px solid #e1e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+  box-sizing: border-box;
+}
+
+.RegistrationForm input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+.RegistrationForm input::placeholder {
+  color: #a0aec0;
+  font-style: italic;
+}
+
+.RegistrationForm input:hover {
+  border-color: #cbd5e0;
+  background: #fff;
+}
+
+.RegistrationForm button {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.RegistrationForm button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.RegistrationForm button:hover::before {
+  left: 100%;
+}
+
+.RegistrationForm button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.RegistrationForm button:active {
+  transform: translateY(0);
+}
+
+.oldUser {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e1e8f0;
+}
+
+.oldUser a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.oldUser a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  background: #667eea;
+  transition: all 0.3s ease;
+}
+
+.oldUser a:hover {
+  color: #764ba2;
+}
+
+.oldUser a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Input validation styles */
+.RegistrationForm input:valid {
+  border-color: #48bb78;
+}
+
+.RegistrationForm input:invalid:not(:placeholder-shown) {
+  border-color: #f56565;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .regContainer {
+    padding: 15px;
+  }
+
+  .RegistrationForm {
+    padding: 30px 25px;
+    margin: 10px;
+  }
+
+  .RegistrationForm h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .RegistrationForm input {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .RegistrationForm button {
+    padding: 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .RegistrationForm {
+    padding: 25px 20px;
+  }
+
+  .RegistrationForm input {
+    padding: 10px 14px;
+  }
+}
+
+/* Loading animation for button */
+.RegistrationForm button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Focus accessibility */
+.RegistrationForm input:focus,
+.RegistrationForm button:focus,
+.oldUser a:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .RegistrationForm {
+    background: rgba(26, 32, 44, 0.95);
+    color: #e2e8f0;
+  }
+
+  .RegistrationForm h2 {
+    color: #e2e8f0;
+  }
+
+  .RegistrationForm label {
+    color: #cbd5e0;
+  }
+
+  .RegistrationForm input {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: #e2e8f0;
+  }
+
+  .RegistrationForm input:focus {
+    background: #1a202c;
+  }
+
+  .oldUser {
+    border-top-color: #4a5568;
+  }
+}

@@ -4,7 +4,7 @@
 This is a responsive and functional SignUp & Registration Page built with **React.js** and **Vite**. It uses **localStorage** to simulate user registration and login, making it ideal for UI prototyping or beginner practice.
 
 ### 🔗 Live Demo
-👉 [View on GitHub Pages](https://aayush45123.github.io/College-Landing-Page-Somaiya)
+👉 [View on GitHub Pages]( https://aayush45123.github.io/React-SignUp-And-Registration-Page/)
 
 ---
 
@@ -98,7 +98,15 @@ package.json
 
 ## 📷 Screenshots
 
-_Add screenshots here if needed._
+### 📝 Registration Page
+![Registration Page](images/register.png)
+
+### 🔐 Sign In Page
+![Sign In Page](images/signUp.png)
+
+### 💾 Data in localStorage
+![localStorage](images/localStorage.png)
+
 
 ---
 

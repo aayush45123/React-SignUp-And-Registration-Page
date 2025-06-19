@@ -21,7 +21,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/React-SignUp-And-Registration-Page", // Add this line for GitHub Pages
+    basename: "/React-SignUp-And-Registration-Page/", // Add this line for GitHub Pages
   }
 );
 
